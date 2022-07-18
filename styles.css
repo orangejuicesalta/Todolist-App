@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top left, rgb(247, 208, 117) 10%, rgb(248, 180, 190) 90%);
+  color: #230e3f;
+}
+
+.header {
+  margin-bottom: 20px;
+  color: white;
+  border: solid .5px white;
+  padding: 5px 5%;
+  border-radius: 10px;
+  box-shadow: 0 0 3px white;
+}
+
+.container {
+  background-color: white;
+  padding: 50px 25px;
+  width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(245, 162, 220, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+#add-task-container {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+input {
+  flex: 7;
+  margin-right: 8px;
+  border: none;
+  border-bottom: solid 1px lightgrey;
+  padding: 5px;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+#add-task {
+  flex: 1;
+  background-color: white;
+  color: rgb(216, 100, 216);
+  border: 1.5px solid rgb(216, 100, 216);
+  border-radius: 50px;
+  font-size: large;
+  padding: 5px 1px 1px 1px;
+  transition: 0.3s;
+}
+#add-task:hover {
+  background-color:rgb(216, 100, 216);
+  color: white;
+}
+
+.today-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.today-date {
+  font-size: large;
+  font-weight: 500;
+}
+
+/* Task-container styling */
+.task-container {
+  display: flex;
+  flex-direction: column;
+}
+.task {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  border-bottom: solid 0.5px lightgray;
+}
+
+.task li {
+  list-style: none;
+  flex: 6;
+  padding: 5px;
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+.task button {
+  flex: 1;
+  border-radius: 30px;
+  background-color: white;
+  font-size: medium;
+  transition: 0.3s;
+}
+
+.task .complete-task {
+  border: none;
+  color: rgb(103, 212, 103);
+}
+
+.task .delete-task {
+  border: none;
+  color: rgb(246, 101, 125);
+}
+
+.task .complete-task:hover {
+  background-color: rgb(103, 212, 103);
+  color: white;
+}
+.task .delete-task:hover {
+  background-color: rgb(246, 101, 125);
+  color: white;
+}
+
+.task .task-time-container {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task .task-time-container .created-time,
+.task .task-time-container .completed-time
+ {
+  font-size: xx-small;
+  margin: 0;
+}
+
+.task .task-time-container .completed-time {
+  border-top: .5px solid lightgray;
+}
+
+.lineThrough_gray {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 400px;
+  }
+}
